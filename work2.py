@@ -6,10 +6,10 @@
 # - 0,56 -> 11
 
 
-a = input('Введите число: ')
-sum = 0
-for i in a:
-    if i != '.':
-        sum += int(i)
-print(sum)
+# a = input('Введите число: ')
+# sum = 0
+# for i in a:
+#     if i != '.':
+#         sum += int(i)
+# print(sum)
 
