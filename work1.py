@@ -33,14 +33,15 @@
 # ¬ - Отрицание ⋁ - логическое "Или" ⋀ - логическое "И"
 
 
-print ('Введите число Х')
-X3 = bool(input())
-print ('Введите число Y')
-Y3 = bool(input())
-print ('Введите число Z')
-Z3 = bool(input()) 
-if not (X3 or Y3 or Z3) == (not X3 and not Y3 and not Z3): 
-    print ('Выражение истинно')
-else:
-    print('Выражение ложно')
-print()
+# print ('Введите число Х')
+# X3 = bool(input())
+# print ('Введите число Y')
+# Y3 = bool(input())
+# print ('Введите число Z')
+# Z3 = bool(input()) 
+# if not (X3 or Y3 or Z3) == (not X3 and not Y3 and not Z3): 
+#     print ('Выражение истинно')
+# else:
+#     print('Выражение ложно')
+# print()
+
