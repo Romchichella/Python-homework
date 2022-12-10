@@ -32,3 +32,5 @@ while i < len(list)/2:
     print(multi, end=" ")
     i +=1
     back = back - 1
+
+    
