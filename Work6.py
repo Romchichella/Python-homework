@@ -50,10 +50,29 @@
 # res = pair_mult(dt_lst)
 # print(res)
 
-# 3-Сформировать список из N членов последовательности.
-# Для N = 5: 1, -3, 9, -27, 81 и т.д.
+# 3 Сформировать список из N членов последовательности.
+# # Для N = 5: 1, -3, 9, -27, 81 и т.д.
 
-from gbfunctions import give_int
+# from gbfunctions import give_int
 
-result = [(-3)**i for i in range(give_int('Type amount of numbers: '))]
+# result = [(-3)**i for i in range(give_int('Type amount of numbers: '))]
+# print(result)
+
+# 4 - Дан список случайных чисел. Оставьте только те, сумма цифр которых четна
+
+from functions import create_random_list
+
+
+def sum_of_digits(number):
+    sum = 0
+    while number > 0:
+        sum = sum + (number % 10)
+        number = number//10
+    return sum
+
+
+lst = create_random_list(10, 100)
+print(lst)
+
+result = [i for i in lst if not sum_of_digits(i) % 2]
 print(result)
