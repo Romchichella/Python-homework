@@ -37,9 +37,7 @@ from functions import create_random_list
 
 
 def get_products_of_pairs(lst: List[int]) -> List[int]:
-    '''
-    Возвращает список произведений пар чисел в исходном списке
-    '''
+    
     product_lst = [lst[i] * lst[-1 - i]
                    for i in range(len(lst) // 2 + len(lst) % 2)]
     return (product_lst)
