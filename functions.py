@@ -1,52 +1,46 @@
-# Following methods are used in 5 tasks of homework.
-# So that's why i moved it "library"
-
-
-from random import random, randint
 from typing import Optional
+from typing import List
+from random import randint
 
-
-def give_int(input_string: str,
-             min_num: Optional[int] = None) -> int:
+def give_int(input_string: str, min_num: Optional[int] = None, max_num: Optional[int] = None) -> int:
     '''
-    Gives integer number
-    :param input_string: welcome to input
-    :param min_num: minimum for number's value
-    :return: int number
+    Takes an int number from user
+    Takes: string
+    Returns: int number or a message about an error
     '''
-
     while True:
         try:
             num = int(input(input_string))
-            if min_num and num <= min_num:
-                print(f'Type number bigger then {min_num}!')
+            if min_num and num < min_num:
+                print(f'Введите больше{min_num}')
+                continue
+            if max_num and num > max_num:
+                print(f'Введите больше{max_num}')
                 continue
             return num
         except ValueError:
-            print("That's not a natural number.")
+            print('Вы ввели не число')
 
 
-def random_list(listlen: int) -> list:
+
+def get_list_data(filename: str) -> List[str]:
     '''
-    Gives list with random values
-    :param listlen: list's length
-    :return: list with random values
+    Возвращает список из строк файла
+    Args:
+    filename - имя файла
+    Returns:
+    List[str]
     '''
+    with open(filename, encoding='utf-8') as file:
+        return file.read().split('\n')
 
-    datalist = list()
-    for i in range(listlen):
-        datalist.append(randint(1, 100))
-    return datalist
-
-
-def random_list_float(listlen: int) -> list:
+def create_random_list(min:int, max:int) -> List:
     '''
-    Gives list with random values
-    :param listlen: list's length
-    :return: list with random values
+    Возвращает список из случайных чисел с количеством элементов, запрашиваемым у пользователя
+    arg num - количество элементов списка
+    min, max - границы случайного числа
+    returns: List
     '''
-
-    datalist = list()
-    for i in range(listlen):
-        datalist.append(round(random() - randint(-10, 10), 4))
-    return 
+    num = give_int('Введите количество элементов списка:\n')
+    list_of_numbers = [randint(min, max) for i in range(num)]
+    return (list_of_numbers)
