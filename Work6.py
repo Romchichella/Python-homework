@@ -23,7 +23,7 @@
 # trigger_str = input('Ввести искомую строку с маленькой буквы\n')
 # print(show_second_index(input_list, trigger_str))
 
-# # 2 Напишите программу, которая найдёт произведение пар чисел списка.
+# 2 Напишите программу, которая найдёт произведение пар чисел списка.
 # # Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 
 # from functions import give_int, random_list
@@ -58,21 +58,21 @@
 # result = [(-3)**i for i in range(give_int('Type amount of numbers: '))]
 # print(result)
 
-# 4 - Дан список случайных чисел. Оставьте только те, сумма цифр которых четна
+# 4 Дан список случайных чисел. Оставьте только те, сумма цифр которых четна
 
-from functions import create_random_list
-
-
-def sum_of_digits(number):
-    sum = 0
-    while number > 0:
-        sum = sum + (number % 10)
-        number = number//10
-    return sum
+# from functions import create_random_list
 
 
-lst = create_random_list(10, 100)
-print(lst)
+# def sum_of_digits(number):
+#     sum = 0
+#     while number > 0:
+#         sum = sum + (number % 10)
+#         number = number//10
+#     return sum
 
-result = [i for i in lst if not sum_of_digits(i) % 2]
-print(result)
+
+# lst = create_random_list(10, 100)
+# print(lst)
+
+# result = [i for i in lst if not sum_of_digits(i) % 2]
+# print(result)
